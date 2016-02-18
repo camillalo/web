@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        body{ margin:0; padding:0; font-size:12px; background:#fff}
+        ul, li{ list-style-type:none; margin:0; padding:0; font-weight:normal; font-style:normal;width: 100%;height:
+        100%}
+        .btn{ height:26px; float:left; padding:20px}
+        .btn a{ width:26px; height:26px; text-align:center; line-height:16px; font-size:11px; float:left;
+            margin-left:5px; cursor:pointer; background:#00F; color:#fff}
+        .btn a:hover, .btn .cur{ background:#F60; text-decoration:none}
+    </style>
+    <script src="js/jquery-2.0.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function(){
+            PicEve();
+        })
+        var i,sum,text;
+        function PicEve(){
+            var $pic_li = $("#pic li");
+            var $btn = $("#btn");
+            sum = $pic_li.length;
+            text="";
+            for( b=0; b<sum; b++){
+                text += "<a></a>"
+            }
+            $btn.html(text)
+            $btn.find("a").each(function(b,n){
+                $(n).attr("index",b)
+                $(n).html(b+1)
+            })
+            $btn.find("a").eq(0).addClass("cur");
+
+            var Play = setInterval(PlayEve, 2000);
+            $btn.find("a").click(function(){
+                $(this).attr("name",1)
+                i=parseInt($(this).attr("index"));
+                c=parseInt($("#btn a[class='cur']").attr("index"));
+                if( i!=c ){
+                    $btn.find("a").removeClass("cur");
+                    $(this).addClass("cur");
+                }
+                clearInterval(Play);
+            })
+            $btn.find("a").mouseout(function(){
+                b=parseInt($(this).attr("name"));
+                i=parseInt($(this).attr("index"));
+                c=parseInt($("#btn a[class='cur']").attr("index"));
+                if( i==c && b==1 ){
+                    Play = setInterval(PlayEve, 2000);
+                    $(this).attr("name",0)
+                }
+            })
+        }
+        function PlayEve(){
+            var $pic_li = $("#pic li");
+            var $btn = $("#btn");
+
+            i=parseInt($("#btn a[class='cur']").attr("index"))
+            sum = $pic_li.length;
+            if( i < sum - 1){
+                $btn.find("a").eq(i).removeClass("cur");
+                $btn.find("a").eq(i+1).addClass("cur");
+                i++
+            }else if(i==sum-1){
+                $btn.find("a").eq(sum-1).removeClass("cur");
+                $btn.find("a").eq(0).addClass("cur");
+                i=0
+            }
+        }
+    </script>
+</head>
+<body>
+<ul id="pic" class="pic">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<div id="btn" class="btn"></div>
+</body>
+</html>

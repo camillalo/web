@@ -1,0 +1,178 @@
+<html>
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+
+    <title>oec2003</title>
+
+    <script language="JavaScript" type="text/JavaScript">
+
+        <!--
+
+        function toggle(targetid){
+
+            if (document.getElementById){
+
+                target=document.getElementById(targetid);
+
+                if (target.style.display=="block"){
+
+                    target.style.display="none";
+
+                } else {
+
+                    target.style.display="block";
+
+                }
+
+            }
+
+        }
+
+        -->
+
+    </script>
+
+    <style type="text/css">
+
+        <!--
+
+        #div1{
+
+            background-color:#000000;
+
+            height:400px;
+
+            width:400px;
+
+            display:none;
+
+        }
+
+        -->
+
+    </style>
+
+</head>
+
+
+
+<body>
+<div class="w1200 user_design_list_box">
+    <div class="user_design_list_l flt">
+        <div id="section-focus-pic" class="section-focus-pic">
+            <div class="pages" log-type="toppic" data-scro="list">
+                <ul>
+                    <li class="item" style="left: 0px;">
+                        <a href="javascript:getLink('0','1432396800','1432483200','http://www.3deazer.com/getWholeArchiveByid.action?searchid=65531','http://www.3deazer.com/getWholeArchiveByid.action?searchid=65531')"/>
+                    </li>
+                    <li class="item">
+                    <li class="item">
+                    <li class="item">
+                </ul>
+            </div>
+            <div class="controler" data-scro="controler">
+                <b class="down">#i.index+1</b>
+                <b class="">#i.index+1</b>
+                <b class="">#i.index+1</b>
+                <b class="">#i.index+1</b>
+            </div>
+            <div class="controler2" data-scro="controler2">
+                <a class="des_prev" href="javascript:;">
+                    <i></i>
+                </a>
+                <a class="des_next" href="javascript:;">
+                    <i></i>
+                </a>
+            </div>
+        </div>
+        <script src="http://www.3deazer.com:80/js/zzsc.js" type="text/javascript">
+            /**
+             **		???????????¨
+             **     ?§???¨?±×??????????°?ó?????????????÷????
+             **/
+            (function($){
+                $("div[data-scro='controler'] b,div[data-scro='controler2'] a").click(function(){
+                    var T = $(this);
+                    if(T.attr("class")=="down") return false;
+                    J2ROLLING_ANIMATION.st({
+                        findObject : T,	//?±?°???÷???ó ??????
+                        main : T.parent().parent().find("div[data-scro='list']"),	//??????±ê???÷?°?????ó
+                        pagSource : T.parent().parent().find("div[data-scro='controler'] b"),	//????°??????ó
+                        className : "down",		//???????ù??
+                        duration : "slow",		//???????? ??jquery????????
+                        on : $(this)[0].tagName=="A" ? true : false		//???????????????????????? or ????????
+                    });
+                    return false;
+                });
+                var J2SETTIME="", J2Time=true,J2ROLLING_ANIMATION = {
+                    init : function(){
+                        this.start();
+                        this.time();
+                    },
+                    st : function(o){
+                        if(J2Time){
+                            this.animate(o.findObject,o.main,o.className,o.duration,o.pagSource,o.on);
+                            J2Time = false;
+                        }
+                    },
+                    animate : function(T,M,C,S,P,O){
+                        var _des_prevDown = O ? P.parent().find("*[class='"+C+"']") : T.parent().find(T[0].tagName+"[class='"+C+"']"),
+                                _des_prevIndex = _des_prevDown.index(),
+                                _thisIndex = O ? (T.attr("class")=="des_next" ? _des_prevIndex+1 : _des_prevIndex-1) : T.index(),
+                                _list = M.find(".item"),
+                                p2n = 1;
+                        _des_prevDown.removeClass(C);
+                        if(O){
+                            if(_thisIndex==-1) _thisIndex=_list.size()-1;
+                            if(_thisIndex==_list.size()) _thisIndex=0;
+                            P.eq(_thisIndex).addClass(C);
+                        }else{
+                            T.addClass(C);
+                        }
+                        if(T.attr("class")=="des_prev" || _thisIndex<_des_prevIndex) p2n = false;
+                        if((T.attr("class")=="des_next" || _thisIndex>_des_prevIndex)&&T.attr("class")!="des_prev") p2n = true;
+
+                        !p2n ? _list.eq(_thisIndex).css("left",-M.width()) : '';
+                        _list.eq(_des_prevIndex).animate({left:p2n ? -M.width() : M.width()},S,function(){
+                            $(this).removeAttr("style");
+                            J2Time = true;
+                        });
+                        _list.eq(_thisIndex).animate({left:"0px"},S);
+                    },
+                    start : function(){
+                        $("#section-focus-pic div[data-scro='controler'] b,#section-focus-pic div[data-scro='controler2'] a").mouseover(function(){
+                            window.clearInterval(J2SETTIME);
+                        }).mouseout(function(){
+                            J2ROLLING_ANIMATION.time();
+                        });
+                    },
+                    time : function(){
+                        J2SETTIME = window.setInterval(function(){
+                            var num = $("#section-focus-pic div[data-scro='controler'] b[class='down']").index(),
+                                    _list = $("#section-focus-pic div[data-scro='list'] li");
+                            _list.eq(num).animate({"left":-$("#section-focus-pic div[data-scro='list']").width()},"slow",function(){
+                                $(this).removeAttr("style");
+                                $("#section-focus-pic div[data-scro='controler'] b").removeClass("down").eq(num).addClass("down");
+                            });
+                            num++;
+                            if(num==_list.size()){
+                                num=0;
+                            }
+                            _list.eq(num).animate({"left":"0px"},"slow");
+                        },4000);
+                    }
+                };
+                $("a").click(function(){
+                    $(this).blur();
+                });
+
+                J2ROLLING_ANIMATION.init();	//????????×???????
+            })(this.jQuery || this.baidu);
+        </script>
+    </div>
+
+</body>
+
+</html>

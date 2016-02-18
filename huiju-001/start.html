@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=gb2312">
+    <meta http-equiv="window-target" content="_top">
+
+    <title>欢迎光临慧巨网络信息科技有限公司</title>
+
+    <meta name="author" content="Camille Lo">
+    <meta name="description" content="上海市慧巨网络科技有限公司的信息网站平台">
+    <meta name="keywords" content="慧巨网络科技,建筑设计,建筑中国,设计平台">
+    <link href="css/start.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+</head>
+
+
+<body>
+<!--网站的导航栏+logo头部-->
+<div id="header">
+    <div id="wrap" class="wrap"><!--可以添加特效，当用户把鼠标移动到页面顶部显示header否则隐藏-->
+        <div id="logo"><a href='index.html'><img src="images/logo.png"></a></div>
+            <nav>
+                <ul>
+                    <li><a href="start.html">首页</a></li>
+                    <!--<li><a href='start.html'>建筑设计</a></li>-->
+                    <!--<li><a href="start.html">建筑规划</a></li>-->
+                    <li><a href="news.html">新闻动态</a></li>
+                    <li><a href='aboutUs.html'>联系我们</a></li>
+                </ul>
+            </nav>
+        </div>
+</div>
+<!--网站的联系方式-->
+<div id="content">
+    <div class="content_wrap">
+        <div id="show_wrap" class="column_wrap">
+            <div id="show_caption" class="column_caption"><span>行业动态</span></div>
+            <div id="show_content" class="column_content">
+                <div class="s_c_nav">
+                    <ul id="list">
+                        <li class="s_c_navItem"><a>世界首个“8字摩天轮”将于澳门建城</a></li>
+                        <li class="s_c_navItem"><a>北京：新机场航站楼概念设计方案曝光</a></li>
+                        <li class="s_c_navItem"><a>迪拜将建711米世界最高住宅楼</a></li>
+                        <li class="s_c_navItem"><a>日建筑师在300年古树内建造豪华树屋</a></li>
+                        <li class="s_c_navItem"><a>上海市城市森林建设凸显“三化”</a></li>
+                        <li class="s_c_navItem"><a>2015深港城市建筑双城双年展文化沙龙在北京举行</a></li>
+                        <li class="s_c_navItem"><a>《上海市建设工程监理管理办法》解读</a></li>
+                        <li class="s_c_navItem"><a>《上海市房屋建筑和市政工程施工招标评标办法》政策解读</a></li>
+                    </ul>
+                </div>
+                <script>
+                    $(document).ready(function(){
+                        var i = 0;
+                        var a = $('.s_c_navItem').length;
+                        for(i;i<a;i++){
+
+                            $("#list").children().eq(i).click(function(){
+                                var b = $('.s_c_navItem').index($(this));
+                                //alert($(this).attr('name'));
+                                $("#s_c_show").children().css("display","none");
+
+                                $('#s_c_show').children().eq(b).css("display","block");
+                                //b += 1;
+                                //alert($('#s_c_show').children().eq(0).attr('name'));
+
+                            })
+                        }
+                    })
+                </script>
+                <div id="s_c_show" class="s_c_show">
+                     <section onmouseover="showDes()" onmouseout="hideDes()"
+                              style="display: block">
+                        <div class="s_c_showImg" id="s_c_showImg_1"><img src="images/content/c1.jpg" id="s_c_showP_1" class="s_c_showP" title="广告图片??1"></div>
+                        <div  class="s_c_showDes"  onmouseover="show()">摘要：在澳门的金光大道上，世界上第一座“8”字形的摩天轮正在进行机械测试。这座即将成为亚洲最高的摩天轮高130米，仅次于拉斯维加斯的“疯狂转轮”和英国泰晤士河畔的“伦敦眼”。<a href="news/new_1.html" style="color: red;" target="_blank">详情</a></div>
+                    </section>
+                    <section  onmouseover="showDes()" onmouseout="hideDes()" style="display: none">
+                        <div class="s_c_showImg" id="s_c_showImg_2"><img src="images/content/d1.jpg" id="s_c_showP_2" class="s_c_showP"></div>
+                        <div  class="s_c_showDes"  onmouseover="show()">摘要：巴黎机场工程公司(ADPI)联手扎哈?哈迪德建筑事务所共同完成了“北京新机场航站楼”的概念设计，这座航站楼位于大兴，是全球最大的机场客运大楼。本次公布的最新设计方案是在ADPI中标方案的基础上，根据北京新机场建设指挥部(BNAH)的意见修改而来 。基于2011年中标的设计方案，BNAH与竞赛联盟组成员英国Buro Happold工程顾问公司、Mott MacDonald国际咨询公司以及EC Harris建筑资产咨询公司创建了联合设计团队，共同优化概念设计。<a href="news/new_2.html" style="color: red;" target="_blank">详情</a></div>
+                    </section>
+                    <section  onmouseover="showDes()" onmouseout="hideDes()" style="display: none">
+                        <div class="s_c_showImg" id="s_c_showImg_3"><img src="images/content/b1.jpg" id="s_c_showP_3" class="s_c_showP"></div>
+                        <div  class="s_c_showDes"  onmouseover="show()">摘要：“壕都”迪拜3日宣布了一个激动人心的大型开发建设计划：一座集商业、住宅、酒店、休闲、娱乐等多功能为一体的“城中城”房地产项目“梅丹一号”，包括全球最高的住宅楼、最长的室内滑雪坡道、规模最大的音乐喷泉等诸多新的建筑世界纪录。<a href="news/new_3.html" style="color: red;" target="_blank">详情</a></div>
+                    </section>
+                    <section  onmouseover="showDes()" onmouseout="hideDes()" style="display: none">
+                        <div class="s_c_showImg" id="s_c_showImg_4"><img src="images/content/a1.jpg" id="s_c_showP_4" class="s_c_showP"></div>
+                        <div  class="s_c_showDes"  onmouseover="show()">摘要：据英国《每日邮报》8月9日报道，日本树屋设计师小林卓志(Takashi Kobayashi)与NAP建筑设计事务所的设计师中村弘至(Hiroshi Nakamura)在日本南部热海市的一棵300年的古樟脑树内部，建造了全球最豪华的树屋“嘻嘻(Kusukusu)”。<a href="news/new_4.html" style="color: red;" target="_blank">详情</a></div>
+                    </section>
+                    <section  onmouseover="showDes()" onmouseout="hideDes()" style="display: none">
+                        <div class="s_c_showImg" id="s_c_showImg_5"><img src="images/content/a1.jpg" id="s_c_showP_5" class="s_c_showP"></div>
+                        <div  class="s_c_showDes"  onmouseover="show()">摘要：为进一步实现“城在林中，林在城内”的生态宜居城市建设目标，市绿化市容管理局陆月星局长在“森林生态功能，让城市和我们更美好”国际论坛上表示，上海将根据地域特征、城市特色，推进城市森林建设，将以“绿色化”为统领，抓好绿地、林地、湿地“融合”发展，围绕打造“绿色城市、安全城市、宜居城市、健康城市”，整合湿地、森林、绿地、农田、水系等要素，坚持“系统化、精细化、功能化”，积极打造“多层次、成网络、功能复合”绿色空间体系，努力构建“江海交汇、水绿交融，多元融合”的生态格局。<a href="news/new_5.html" style="color: red;" target="_blank">详情</a></div>
+                    </section>
+                    <section  onmouseover="showDes()" onmouseout="hideDes()" style="display: none">
+                        <div class="s_c_showImg" id="s_c_showImg_6"><img src="images/content/a1.jpg" id="s_c_showP_6" class="s_c_showP"></div>
+                        <div  class="s_c_showDes"  onmouseover="show()">摘要：从城市原点走向城市未来??2015深港城市、建筑双城双年展(以下简称“深双”)北京推广会暨文化沙龙于2015年7月8日于北京单向空间花家地店举行。<a href="news/new_6.html" style="color: red;" target="_blank">详情</a></div>
+                    </section>
+                    <section  onmouseover="showDes()" onmouseout="hideDes()" style="display: none">
+                        <div class="s_c_showImg" id="s_c_showImg_7"><img src="images/content/a1.jpg" id="s_c_showP_7" class="s_c_showP"></div>
+                        <div  class="s_c_showDes"  onmouseover="show()">摘要：工程监理是建设工程管理中的重要组成部分，工程监理对于控制工程建设的质量、进度、安全、投资等方面发挥积极作用。工程监理水平的高低与工程质量紧密相关，加强建设工程监理管理是提高建设工程质量安全的重要保证。1997年，上海颁布《上海市建筑市场管理条例》，确定了应当监理的工程范围，并对监理企业职责作了原则性的规定。<a href="news/new_7.html" style="color: red;" target="_blank">详情</a></div>
+                    </section>
+                    <section  onmouseover="showDes()" onmouseout="hideDes()" style="display: none">
+                        <div class="s_c_showImg" id="s_c_showImg_8"><img src="images/content/a1.jpg" id="s_c_showP_8" class="s_c_showP"></div>
+                        <div  class="s_c_showDes"  onmouseover="show()">摘要：根据崔明华书记、裴晓副主任指示精神，结合此次中央巡视组提出的本市建设工程招投标和承发包中存在围标串标、明招暗定、违法分包和肢解发包等问题，我们确定了此次修订的基本原则：一是对工程进行合理分类，出台针对不同工程规模和特点的针对性较强的评标办法；二是减少招标代理机构和评标专家的自由裁量空间，利用计算机进行数据分析，剔除不合理报价，避免恶意低价竞争，增加围标串标难度；三是适当还权于业主，让业主的权利在阳光下运行；四是坚持鼓励竞争，引导合理低价。<a href="news/new_8.html" style="color: red;" target="_blank">详情</a></div>
+                    </section>
+                </div>
+                <script>
+//                    该段代码需要修改
+                    function showDes(){
+
+                        document.getElementsByClassName('s_c_showDes')[9].style.display='block';
+                    }
+                    function hideDes(){
+                        document.getElementsByClassName('s_c_showDes')[9].style.display='none';
+                    }
+                </script>
+            </div>
+        </div>
+        <!--<div id="news_wrap" class="column_wrap">-->
+            <!--<div id="news_caption" class="column_caption"><span>项目展示</span></div>-->
+            <!--<div id="news_content" class="column_content"></div>-->
+        <!--</div>-->
+        <!--<div id="works_wrap" class="column_wrap">-->
+            <!--<div id="works_caption" class="column_caption"><span>项目展示</span></div>-->
+            <!--<div id="works_content" class="column_content"></div>-->
+        <!--</div>-->
+        <div class="clear"></div>
+        <div id="hot_wrap" class="column_wrap">
+            <div id="hot_caption" class="column_caption"><span>建筑经典设计</span></div>
+            <div id="hot_content" class="column_content">敬请期待…………</div>
+        </div>
+    </div>
+</div>
+<!--end-->
+
+<!--页脚-->
+<footer id="footer">
+    <!--第一部分-->
+    <div id="hj_details">
+        <div class="hj_detail">
+            <h2 class="small_title">主要业务</h2>
+            <hr style="background: #ff9218; width:80%; height: 2px; margin:10px auto"/>
+            <p class="detail">针对目前建筑设计及相关的城市建设服务领域（规划设计、景观设计、室内设计等）普遍存在服务需求方和服务供给方，由于缺少信息链接平台而彼此找不到，或找不到最恰当的合作对象的情况。本网站建立基于公开设计竞争的供给方和需求方的撮合平台，只在利用互联网的信息透明和对称，促使甲乙双方针对项目互动并成交。</p>
+        </div>
+        <div class="hj_detail">
+            <h2 class="small_title">技术情况</h2>
+            <hr style="background: #FF9218; width:80%; height: 2px; margin:10px auto"/>
+            <p class="detail">采用世界先进的互联网设计技术以及独特的O2O设计理念，拥有自主核心知识产权的大数据分析模型，在一定程度上能够弥补国内相应领域的技术空白。</p>
+        </div>
+        <div class="hj_detail">
+            <h2 class="small_title">市场情况</h2>
+            <hr style="background: #FF9218; width:80%; height: 2px; margin:10px auto"/>
+        <p class="detail">本项目成功后，将是中国首个真正基于互联网思维的建筑设计服务供应平台和设计专业人员汇聚的网络空间，在一定程度上影响设计业的服务模式，促进设计业的专业进步，改善设计业当前较为低沉的行业氛围。</p>
+        </div>
+    </div>
+    <!--第二部分-->
+    <div id="foot_info" style="color: #ffffff;font-family: 'Adobe 仿宋 Std R', 'Adobe 仿宋 Std';font-size: 15px;font-weight: bold;">
+        公司地址：上海市静安寺美丽园大厦&nbsp;&nbsp;|&nbsp;&nbsp;
+        联系电话：021-64222030<br>
+    </div>
+</footer>
+<!--页脚-->
+</body>
+</html>

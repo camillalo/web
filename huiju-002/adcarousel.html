@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=gb2312">
+
+    <title>jQuery幻灯片插件Owl Carousel演示-自动播放_dowebok</title>
+    <style>
+        * { margin: 0; padding: 0;}
+        html, body { height: 100%; overflow: hidden;}
+        .menu a:hover { background-color: #eee;}
+        .mianc { position: relative; height: 100%; overflow-x: hidden; overflow-y: auto;}
+        .main h1 { text-align:center;width: 900px; margin: 40px auto; font: 32px "Microsoft Yahei";} * { margin: 0; padding: 0;}
+        html, body { height: 100%; overflow: hidden;}
+        .menu a:hover { background-color: #eee;}
+        .mianc { position: relative; height: 100%; overflow-x: hidden; overflow-y: auto;}
+        .main h1 { text-align:center;width: 900px; margin: 40px auto; font: 32px "Microsoft Yahei";}
+    </style>
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script>
+        $(function(){
+            $('#owl-demo').owlCarousel({
+                items: 1,
+                autoPlay: true
+            });
+        });
+    </script>
+</head>
+
+<body>
+<div class="main">
+    <div class="mianc">
+        <h1>自动播放</h1>
+
+        <!-- Demo -->
+        <div id="owl-demo" class="owl-carousel">
+            <a class="item"><img src="images/ad_1.jpg" alt=""></a>
+            <a class="item"><img src="images/ad_2.jpg" alt=""></a>
+            <a class="item"><img src="images/ad_3.jpg" alt=""></a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
