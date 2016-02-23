@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+*{-webkit-appearance: none;}
+a:visited, a{text-decoration:none;cursor:pointer;color: #420000;}
+a.a,.a{color:#c00;}
+input[type="checkbox"]{-webkit-appearance: checkbox;}
+body,html,h1,h2,h3,h4,p,ul,li,form{margin:0;padding:0;list-style:none;}
+body,input,textarea,select{font-size:14px; list-style:22px;font-family:Arial, 'microsoft yahei',sans-serif;color:#999;}
+.clear{ clear:both;}
+img{ border:none;}
+.noline{ border:none;}
+.fl{ float:left;}
+.fr{ float:right;}
+.on{color: #ccc !important;}
+.bcolor01{ background-color:#2e6061; width:100%;}
+.bcolor02{ background-color:#612e59; width:100%;}
+.bcolor03{ background-color:#613c2e; width:100%;}
+.bigcon{ width:1280px; margin:0 auto; background-color:#fff;}
+.con{ width:1000px; margin:0 auto;}
+.asubleft{ float:left; width:180px; display:inline;}
+.asubleft ul{ margin:30px auto 30px 30px;}
+.asubleft li{ width:160px; height:30px; line-height:30px; vertical-align:middle; padding:0 0 0 20px; margin:20px auto; text-align:left; font-size:16px;}
+.asubleft li.cus{ background:url(../../images/icon02.gif) left center no-repeat; color:#c00; font-weight:bold;}
+.asubright{ float:right; width:770px; text-align:left; padding:30px 0 20px; display:inline; }
+.asubright h1{ background:url(../../images/h1bg.jpg) no-repeat; width:770px; height:24px;  text-align:left; padding:6px 0 0 20px; font-size:16px; font-weight:bold; color:#333;}
+.asubright h2{ color:#1a3e4e; font-size:15px; margin:20px 0 5px;}
+.asubright .cbox{ padding:10px 18px 20px;}
+.zizhi{ line-height:26px;}
+.liucheng02 { border:1px #F93 dashed; padding:10px; margin:10px auto;}
+.liucheng02 td{ color: #036; font-weight:bold;}
+.uup{ line-height:32px; margin-bottom:10px;}
+.padl{ margin:35px auto 0;}
+
+.about h2{ font-size:18px; font-weight:bold; text-align:center; margin:20px auto 15px;}
+.about p{ margin:15px auto; line-height:24px; text-indent:26px;}
+.about .ld{ padding-left:26px; line-height:24px;}
+.contact{ margin-top:30px;}
+.contact h3{ font-size:16px; font-weight:bold; margin:15px auto 15px;}
+.contact .lx{ line-height:28px;}
+.contact .tel{ color:#c00;}
+
+.heardbox{ width:100%;min-width: 1280px; background-color:#181c29; }
+.header{ width:1000px; margin:0 auto; height:110px; position:relative;}
+.header .logo{ position:absolute; left:40px; top:20px; width:150px;}
+.header .menu{ position:absolute; bottom:30px; right:20px;}
+.header .menu li{ float:left; display:inline; font-size:16px; padding:0 40px; background:url(../../images/menubg.jpg) right center no-repeat;}
+.header .menu li.nobg{ background:none;}
+.header .menu li a{ color:#777;}
+.header .menu li a:hover{ color:#ccc; text-decoration:none;}
+.bannerbox{ width:100%; background-color:#264d80;height:500px;}
+.banner{ background:url(../../images/banner.jpg)  center no-repeat; height:500px; }
+.bannercon{ width:1000px; height:540px; position:relative; margin:0 auto;}
+.bannercon .ewm{ position:absolute; left:390px; top:190px; width:153px;}
+.bannercon .download1{ position:absolute; top:195px; left:570px; }
+.bannercon .download2{ position:absolute; top:280px; left:570px; }
+
+.main{ width:1000px; margin:0 auto;}
+.subleft{ float:left; width:380px; height:340px; position:relative;}
+.subleft h1{ font-size:24px; position:absolute; left:53px; top:40px;}
+.subleft .pin{ position:absolute; left:50px; bottom:30px; width:306px; height:200px; background:url(../../images/pin.jpg) no-repeat;}
+.subleft .pin p{ font-size:22px; margin:65px 15px 10px 125px; line-height:30px; text-align:left; color:#777;}
+.subleft .pin p a{ text-decoration:none; color:#777;}
+.subright{ float:right; width:500px;}
+.subright .bianhao{ position:relative; margin:30px auto 10px; height:70px;}
+.subright .bianhao .bh{ position:absolute; left:10px; top:10px;}
+.subright .bianhao .bhcon{ position:absolute; left:80px; top:10px; text-align:left; font-size:18px;}
+.subright .bianhao .bhcon p{ color:#999; margin-top:10px; font-size:16px;}
+
+.footer{width: 100%; min-width:1280px;height:40px; line-height:40px; vertical-align:middle; background-color:#EF953C;
+    color: #555;font-size:14px; text-align:center;}

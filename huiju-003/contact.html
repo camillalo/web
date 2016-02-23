@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>上海慧巨网络科技有限公司</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="Bookmark" href="images/favicon.ico">
+    <meta name="keywords" content="慧巨">
+    <meta name="description" content="慧巨">
+    <link href="pc/css/base.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div align="center">
+    <div class="heardbox">
+        <div class="header">
+            <div class="logo"><img src="images/logo.jpg" width="150" height="70" alt="点钟"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="about.html">公司简介</a></li>
+                    <li><a href="product.html">产品介绍</a></li>
+                    <li class="nobg"><a class="on" href="contact.html">联系我们</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div align="center">
+    <div class="bcolor02"><img src="images/banner02.jpg" width="1280" height="300" alt="">
+    </div>
+</div>
+
+<div align="center">
+    <div class="bigcon">
+        <div class="con">
+            <div class="asubleft">
+                <ul>
+                    <li><a href="index.html">首&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;页</a></li>
+                    <li><a href="about.html">公司简介</a></li>
+                    <li><a href="product.html">产品介绍</a></li>
+                    <li class="cus">联系我们</li>
+
+                </ul>
+            </div>
+            <div class="asubright">
+                <h1>联系我们</h1>
+
+                <div class="cbox" style="padding-top:20px;">
+                    <div class="contact">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td valign="top"><img src="images/ewm02.jpg" width="200" height="200"></td>
+                                <td width="30" valign="top">&nbsp;</td>
+                                <td valign="top"><h3>还不了解上海慧巨？快来了解吧，手慢了就没机会喽！</h3>
+                                    扫描左侧二维码关注公司动态！<br>
+                                    <br>
+                                    <div class="lx">
+                                        请登录慧巨官方网站：<img src="images/icon1.png" width="20" height="20" align="absmiddle"
+                                                       style="margin:0 10px 0 1px;"><a
+                                            href="http://www.huijunet.com">www.huijunet.com</a><br>
+
+                                        拨打我们的服务热线：<img src="images/icon2.png"
+                                                       width="20" height="20" align="absmiddle"
+                                                       style="margin:0 10px 0 1px;"><span
+                                            class="tel">021-68360713</span><br>
+
+                                        公司24小时服务邮箱：<img src="images/icon3.png"
+                                                        width="20" height="20" align="absmiddle"
+                                                        style="margin:0 10px 0 0;"><a
+                                            href="mailto:info@huijunet.com">info@huijunet.com</a><br>
+
+                                        <p style="margin:12px 0 0; font-size:15px;">真诚期待各界优秀人才的入驻！快加入我们吧！</p><br>
+                                    </div>
+                                    <br/>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div style="border: lightgray solid 2px;padding: 10px;width: 800px">
+                            <div id="allmap" style="width:800px; height:380px"></div>
+                        </div>
+                        <div style="margin: 10px;text-align: right">
+                            公司地址：上海市浦东新区祖冲之路2288弄展讯中心3号楼1101室</div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<div align="center">
+    <div class="footer">沪ICP备16002724号-1&nbsp;&nbsp;上海慧巨网络科技有限公司</div>
+</div>
+
+</body>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=7g3RUsnWHiekoYdgPcHqbVU2"></script>
+<script>
+    // 百度地图API功能
+    var map = new BMap.Map("allmap");
+    var point = new BMap.Point(121.633091,31.215772);
+    map.centerAndZoom(point, 15);
+    var marker = new BMap.Marker(point);  // 创建标注
+    map.addOverlay(marker);               // 将标注添加到地图中
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    map.enableScrollWheelZoom(true);
+</script>
+</html>
