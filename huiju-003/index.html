@@ -9,6 +9,8 @@
     <meta name="keywords" content="慧巨">
     <meta name="description" content="慧巨">
     <link href="pc/css/base.css" rel="stylesheet" type="text/css">
+    <script src="pc/js/jquery.js"  type="text/javascript"></script>
+    <script src="pc/js/jquery.banner.js"  type="text/javascript"></script>
 </head>
 <body>
 <div align="center">
@@ -29,20 +31,41 @@
 <div align="center">
     <div class="bannerbox">
         <div class="banner">
-            <div class="bannercon">
+            <ul class="banList">
+                <li class="active"><a href=""><img src="images/img1.jpg" alt=""/></a></li>
+                <li><a href=""><img src="images/img2.jpg" alt=""/></a></li>
+                <li><a href=""><img src="images/img3.jpg" alt=""/></a></li>
+                <li><a href=""><img src="images/img4.jpg" alt=""/></a></li>
+            </ul>
+
+            <div class="fomW">
+                <div class="jsNav">
+                    <a href="javascript:;" class="trigger current"></a>
+                    <a href="javascript:;" class="trigger"></a>
+                    <a href="javascript:;" class="trigger"></a>
+                    <a href="javascript:;" class="trigger"></a>
+                </div>
+            </div>
+            <!--<div class="bannercon">-->
                 <!--<div class="ewm"><img src="images/ewm.jpg" width="153" height="153"></div>-->
                 <!--<div class="download1"><a href="#"><img src="images/dl01.jpg" alt="iPhone客户版" width="162" height="54" border="0"></a></div>-->
                 <!--<div class="download2"><a href="#"><img src="images/dl01.jpg" alt="Android客户版" width="162"-->
                                                         <!--height="54" border="0"></a></div>-->
-            </div>
+            <!--</div>-->
         </div>
     </div>
+    <script type="text/javascript">
+        $(function(){
+            $(".banner").swBanner();
+
+        });
+    </script>
 </div>
 <div align="center">
     <div class="main">
         <div class="subleft">
             <h1>业主找设计！就上甲方乙方网</h1>
-            <div class="pin"><p><a href="#">土豪和您之间只
+            <div class="pin"><p><a href="contact.html">土豪和您之间只
                 差一步，快加入
                 我们吧！</a></p>
             </div>
